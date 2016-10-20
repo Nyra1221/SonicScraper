@@ -8,6 +8,8 @@ def search():
     elif query == "!rs":
         search()
 
+    print "Searching..."
+
         
     ayylmao = google.search(query, tld='com', lang='en', num=10, start=0, stop=10, pause=2.0)
     print "\n"
@@ -37,7 +39,10 @@ def rand():
     for line in names:
         n.append(line)
         index = random.randint(0, len(n)-1)
-        name = n[index] + "the hedgehog"
+        name = n[index] + " " + "the hedgehog"
+
+    print "Name selected: {}".format(name)
+    print "\n Searching..."
 
 
     ayylmao = google.search(name, tld='com', lang='en', num=10, start=0, stop=10, pause=2.0)
